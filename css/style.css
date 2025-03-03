@@ -5,16 +5,19 @@ body {
   font-family: "Poppins", serif !important;
 }
 div.nav {
-  background-color: #61a3d8;
-  backdrop-filter: blur(10px);
+  background-color: #ffffff57;
+  transition: background-color 0.5s ease-in-out;
+  position: sticky;
+  top: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   padding-bottom: 10px;
-  padding: 30px 30px;
+  padding: 15px 10px;
   border-radius: 20px;
   width: 50%;
   margin: 0 auto;
+  z-index: 999999;
 }
 .nav-links {
   display: flex;
@@ -24,38 +27,63 @@ div.nav-links a {
   text-decoration: none;
   color: black;
   font-weight: 400;
+  cursor: pointer;
+}
+.myprofile {
+  display: flex;
 }
 header {
   background: linear-gradient(to bottom, #bfffff, #a5ffff, #ecffff, #ffffff);
   text-align: center;
-  height: 730px;
+  height: 760px;
+  position: relative;
+  bottom: 100px;
+}
+
+.myprofile {
+  align-items: center;
+  text-align: center;
+  position: relative;
+  padding-top: 50px;
 }
 
 .myphoto {
   width: 100%;
   height: auto;
   position: relative;
-  bottom: 200px;
+  bottom: 150px;
   right: 350px;
 }
 h3.h3_myprofile {
   font-family: "Source Sans 3", serif !important;
   position: absolute;
   font-size: 55px;
-  bottom: 300px;
+  bottom: 500px;
   left: 450px;
   color: #1b7cb4;
   text-transform: uppercase;
 }
+
 span.span_myprofile {
   position: absolute;
-  bottom: 270px;
+  bottom: 480px;
   left: 450px;
-  font-size: 25px;
+  font-size: 18px;
 }
-section.section_profile {
-  padding-top: 1px;
-  height: 700px;
+
+/* Media query untuk tampilan mobile */
+@media screen and (max-width: 768px) {
+  .myphoto {
+    max-width: 120px; /* Ukuran gambar lebih kecil untuk layar kecil */
+  }
+
+  h3.h3_myprofile {
+    font-size: 24px; /* Ukuran teks lebih kecil */
+  }
+
+  span.span_myprofile {
+    font-size: 16px; /* Ukuran teks lebih kecil */
+  }
 }
 h3.h3_section_profile {
   text-align: center;
@@ -63,10 +91,15 @@ h3.h3_section_profile {
   font-size: 35px;
   text-transform: uppercase;
 }
+h3.h3_section_project {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 35px;
+  text-transform: uppercase;
+}
 div.row_section {
   text-align: justify;
   line-height: 2;
-  margin: 50px;
 }
 div.div_skills {
   padding: 20px 30px;
@@ -81,38 +114,67 @@ div.skills_java {
 div.skills_java:hover {
   background-color: #97b9ce;
 }
-div.skills_sql{
+div.skills_sql {
   background-color: rgb(157, 157, 157);
 }
-div.skills_sql:hover{
+div.skills_sql:hover {
   background-color: rgb(186, 186, 186);
 }
-div.skills_php{
+div.skills_php {
   background-color: #787b9e;
 }
-div.skills_php:hover{
+div.skills_php:hover {
   background-color: #a3a7d2;
 }
-div.skills_html{
+div.skills_html {
   background-color: #ff9951;
 }
-div.skills_html:hover{
+div.skills_html:hover {
   background-color: #ffab6e;
 }
-div.skills_css{
+div.skills_css {
   background-color: #58a5e4;
 }
-div.skills_css:hover{
+div.skills_css:hover {
   background-color: #73b0e2;
 }
-div.skills_js{
+div.skills_js {
   background-color: #e0cc4c;
 }
-div.skills_js:hover{
+div.skills_js:hover {
   background-color: #b4a545;
 }
 p.p_about_me {
   text-align: center;
   margin: 0 32px;
   font-size: 17px;
+}
+section.section_profile {
+  margin: 50px;
+}
+section.section_project {
+  margin-top: 200px;
+}
+@media (max-width: 675px) {
+  div.nav {
+    width: 80%;
+  }
+}
+@media (max-width: 500px) {
+  div.nav {
+    width: 95%;
+  }
+  div.div_skills {
+    padding: 10px 15px;
+    text-align: center;
+    margin: 10px;
+    border-radius: 10px;
+    cursor: default;
+  }
+}
+@media (max-width: 400px) {
+  div.div_skills {
+    position: relative;
+    right: 35px;
+  }
 }
