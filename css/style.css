@@ -29,61 +29,34 @@ div.nav-links a {
   font-weight: 400;
   cursor: pointer;
 }
-.myprofile {
-  display: flex;
+header, .container {
+  max-width: 100%;
+  overflow: hidden;
 }
+
 header {
   background: linear-gradient(to bottom, #bfffff, #a5ffff, #ecffff, #ffffff);
   text-align: center;
   height: 760px;
   position: relative;
   bottom: 100px;
+  padding: 50px 0;
 }
-
-.myprofile {
-  align-items: center;
-  text-align: center;
-  position: relative;
-  padding-top: 50px;
-}
-
 .myphoto {
-  width: 100%;
+  width: 650px;
   height: auto;
+  margin-top: 100px;
   position: relative;
-  bottom: 150px;
-  right: 350px;
 }
-h3.h3_myprofile {
+.h3_myprofile {
   font-family: "Source Sans 3", serif !important;
-  position: absolute;
-  font-size: 55px;
-  bottom: 500px;
-  left: 450px;
+  font-size: 36px; 
   color: #1b7cb4;
   text-transform: uppercase;
 }
 
-span.span_myprofile {
-  position: absolute;
-  bottom: 480px;
-  left: 450px;
+.span_myprofile {
   font-size: 18px;
-}
-
-/* Media query untuk tampilan mobile */
-@media screen and (max-width: 768px) {
-  .myphoto {
-    max-width: 120px; /* Ukuran gambar lebih kecil untuk layar kecil */
-  }
-
-  h3.h3_myprofile {
-    font-size: 24px; /* Ukuran teks lebih kecil */
-  }
-
-  span.span_myprofile {
-    font-size: 16px; /* Ukuran teks lebih kecil */
-  }
 }
 h3.h3_section_profile {
   text-align: center;
@@ -102,6 +75,10 @@ div.row_section {
   line-height: 2;
 }
 div.div_skills {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 29%;
   padding: 20px 30px;
   text-align: center;
   margin: 10px;
@@ -155,6 +132,17 @@ section.section_profile {
 section.section_project {
   margin-top: 200px;
 }
+@media (max-width: 770px){
+  .myphoto{
+    width: 400px;
+  }
+  .h3_myprofile{
+    font-size: 30px;
+  }
+  .span_myprofile{
+    font-size: 15px;
+  }
+}
 @media (max-width: 675px) {
   div.nav {
     width: 80%;
@@ -164,17 +152,22 @@ section.section_project {
   div.nav {
     width: 95%;
   }
-  div.div_skills {
-    padding: 10px 15px;
-    text-align: center;
-    margin: 10px;
-    border-radius: 10px;
-    cursor: default;
+  .myphoto{
+    width: 300px;
+  }
+  .h3_myprofile{
+    font-size: 28px;
+  }
+  .span_myprofile{
+    font-size: 13px;
   }
 }
 @media (max-width: 400px) {
   div.div_skills {
     position: relative;
-    right: 35px;
+    right: 18px;
+  }
+  div.div_skills{
+    width: 32%;
   }
 }
