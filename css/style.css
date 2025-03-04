@@ -29,6 +29,9 @@ div.nav-links a {
   font-weight: 400;
   cursor: pointer;
 }
+div.nav-links a:hover{
+  color: #1B7CB4;
+}
 header, .container {
   max-width: 100%;
   overflow: hidden;
@@ -131,6 +134,12 @@ section.section_profile {
 }
 section.section_project {
   margin-top: 200px;
+}
+section.section_project img{
+  cursor: pointer;
+}
+section.section_project p{
+  text-align: justify;
 }
 footer{
   background-color: #a5ffff;
